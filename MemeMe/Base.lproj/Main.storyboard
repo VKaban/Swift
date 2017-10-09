@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A70-eR-3Gc"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fj4-IQ-2my">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KuH-HN-wqG"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-kt-rRy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UQH-kp-QDq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-zP-GAt">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hik-3g-LiB">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.53725492949999998" green="0.80784314869999996" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Camera">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickAnImageFromCameraWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcx-dx-yyn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-Hq-3Xx">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Pick">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRv-Kh-rei"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="158-fJ-Pw1"/>
+                                    <constraint firstItem="hik-3g-LiB" firstAttribute="width" secondItem="3dj-Hq-3Xx" secondAttribute="width" id="EGO-Xh-jn4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dBu-zP-GAt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Ja-HP-xuA"/>
+                            <constraint firstItem="dBu-zP-GAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6A7-8i-zcN"/>
+                            <constraint firstItem="fj4-IQ-2my" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="CO2-0M-IQV">
+                                <variation key="heightClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="A70-eR-3Gc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DZl-bw-DB7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dBu-zP-GAt" secondAttribute="bottom" id="EXx-yA-tee"/>
+                            <constraint firstAttribute="trailing" secondItem="dBu-zP-GAt" secondAttribute="trailing" id="Mh1-oz-isc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yh7-kt-rRy" secondAttribute="bottom" constant="75" id="RIa-b0-DE2">
+                                <variation key="heightClass=compact" constant="65"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="Yh7-kt-rRy" secondAttribute="trailing" id="b2p-en-Uae"/>
+                            <constraint firstAttribute="bottom" secondItem="A70-eR-3Gc" secondAttribute="bottom" id="bB4-xY-7KI"/>
+                            <constraint firstItem="Yh7-kt-rRy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cxG-eO-JmW"/>
+                            <constraint firstItem="A70-eR-3Gc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mJu-dI-N4y"/>
+                            <constraint firstAttribute="trailing" secondItem="A70-eR-3Gc" secondAttribute="trailing" id="q3h-Pe-n17"/>
+                            <constraint firstItem="fj4-IQ-2my" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="thQ-Yv-JWl"/>
+                            <constraint firstAttribute="trailing" secondItem="fj4-IQ-2my" secondAttribute="trailing" id="uFl-nl-mwZ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="Camera" destination="hik-3g-LiB" id="Pe7-yD-rs9"/>
+                        <outlet property="Pick" destination="3dj-Hq-3Xx" id="gen-Qy-wkX"/>
+                        <outlet property="bottomTextfield" destination="Yh7-kt-rRy" id="jPR-ow-Off"/>
+                        <outlet property="imagePickerView" destination="A70-eR-3Gc" id="g1e-ru-csZ"/>
+                        <outlet property="topTextfield" destination="fj4-IQ-2my" id="7FV-KF-14z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114.375" y="99.295774647887328"/>
+        </scene>
+    </scenes>
+</document>
